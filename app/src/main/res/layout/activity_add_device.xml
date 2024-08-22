@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/addDeviceActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView android:id="@+id/textAddDevice"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/jungle_green"
+        android:gravity="center"
+        android:text="@string/add_device"
+        android:textAlignment="inherit"
+        android:textAppearance="@style/CustomTitleText"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textAddDevice"
+        app:layout_constraintVertical_bias="0.0" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:elevation="1dp"
+                android:hint="@string/device_name"
+                android:enabled="false"
+                app:boxBackgroundColor="@color/textInput_background">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputDeviceName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:elevation="1dp"
+                android:hint="@string/wifi"
+                app:startIconDrawable="@drawable/icon_wifi"
+                app:boxBackgroundColor="@color/textInput_background">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputSSID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:elevation="1dp"
+                android:hint="@string/password"
+                app:boxBackgroundColor="@color/textInput_background"
+                app:passwordToggleEnabled="true"
+                app:startIconDrawable="@drawable/icon_password">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/inputPasswordWifi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:baselineAligned="false"-->
+<!--                android:orientation="horizontal">-->
+<!--                <TextView-->
+<!--                    android:layout_width="170dp"-->
+<!--                    android:layout_height="30dp"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:background="@color/textInput_background"-->
+<!--                    android:text="Number of Sensors"-->
+<!--                    android:gravity="center"-->
+<!--                    android:textSize="16sp"/>-->
+<!--            </LinearLayout>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:elevation="1dp"
+                    android:hint="@string/hole1Id"
+                    app:boxBackgroundColor="@color/textInput_background">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputHole1Id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:elevation="1dp"
+                    android:enabled="false"
+                    android:hint="@string/sensor1Id"
+                    app:boxBackgroundColor="@color/textInput_background">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputSensor1Id"
+                        android:text="@string/sensor1IdValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:elevation="1dp"
+                    android:hint="@string/hole2Id"
+                    app:boxBackgroundColor="@color/textInput_background">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputHole2Id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:elevation="1dp"
+                    android:enabled="false"
+                    android:hint="@string/sensor2Id"
+                    app:boxBackgroundColor="@color/textInput_background">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/inputSensor2Id"
+                        android:text="@string/sensor2IdValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <TextView android:id="@+id/errorAddDeviceTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"/>
+            <Button
+                android:id="@+id/NextBt"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Next"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

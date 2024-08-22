@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!--    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="4dp"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+                    <Spinner
+                        android:id="@+id/dataRecordSp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout> !-->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/fetch_data_Swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.core.widget.NestedScrollView android:id="@+id/fetch_data_nestedScV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/general_chart"
+                        android:textAppearance="@style/TitleChartText"
+                        android:gravity="center"
+                         />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+
+                        <TextView android:id="@+id/general_today"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="@string/today"
+                            android:textAppearance="@style/LegendText"
+                            app:drawableLeftCompat="@drawable/rouge_rectangle"
+                            android:drawablePadding="2dp"/>
+                        <TextView android:id="@+id/general_day1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="@string/day1"
+                            android:textAppearance="@style/LegendText"
+
+                            app:drawableLeftCompat="@drawable/forest_green_rectangle"
+                            android:drawablePadding="2dp"/>
+                        <TextView android:id="@+id/general_day2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="@string/day2"
+                            android:textAppearance="@style/LegendText"
+                            app:drawableLeftCompat="@drawable/cobalt_blue_rectangle"
+                            android:drawablePadding="2dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/general_lchart"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/bar_chart_height"
+                    android:layout_marginBottom="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fly_in_chart"
+                        android:textAppearance="@style/TitleChartText"
+                        android:gravity="center"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+
+                        <TextView android:id="@+id/flyin_today"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="@string/today"
+                            android:textAppearance="@style/LegendText"
+                            app:drawableLeftCompat="@drawable/rouge_rectangle"
+                            android:drawablePadding="2dp"/>
+                        <TextView android:id="@+id/flyin_day1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="@string/day1"
+                            android:textAppearance="@style/LegendText"
+                            app:drawableLeftCompat="@drawable/forest_green_rectangle"
+                            android:drawablePadding="2dp"/>
+                        <TextView android:id="@+id/flyin_day2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="@string/day2"
+                            android:textAppearance="@style/LegendText"
+                            app:drawableLeftCompat="@drawable/cobalt_blue_rectangle"
+                            android:drawablePadding="2dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/flyin_lchart"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/bar_chart_height"
+                    android:layout_marginBottom="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fly_out_chart"
+                        android:textAppearance="@style/TitleChartText"
+                        android:gravity="center"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+
+                        <TextView android:id="@+id/flyout_today"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="@string/today"
+                            android:textAppearance="@style/LegendText"
+                            app:drawableLeftCompat="@drawable/rouge_rectangle"
+                            android:drawablePadding="2dp"/>
+                        <TextView android:id="@+id/flyout_day1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="@string/day1"
+                            android:textAppearance="@style/LegendText"
+                            app:drawableLeftCompat="@drawable/forest_green_rectangle"
+                            android:drawablePadding="2dp"/>
+                        <TextView android:id="@+id/flyout_day2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="@string/day2"
+                            android:textAppearance="@style/LegendText"
+                            app:drawableLeftCompat="@drawable/cobalt_blue_rectangle"
+                            android:drawablePadding="2dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/flyout_lchart"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/bar_chart_height"
+                    android:layout_marginBottom="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white">
+                    <com.google.android.material.tabs.TabLayout android:id="@+id/birdprediction_Tl"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/BirdpredictionTabLayout">
+                        <com.google.android.material.tabs.TabItem
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/week" />
+                        <com.google.android.material.tabs.TabItem
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/two_weeks" />
+                        <com.google.android.material.tabs.TabItem
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/month" />
+                    </com.google.android.material.tabs.TabLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bird_prediction_chart"
+                        android:textAppearance="@style/TitleChartText"
+                        android:gravity="center"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center">
+
+                        <TextView android:id="@+id/bp_prediction"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="@string/prediction"
+                            android:textAppearance="@style/LegendText"
+                            app:drawableLeftCompat="@drawable/rouge_rectangle"
+                            android:drawablePadding="2dp"/>
+                        <TextView android:id="@+id/bp_prediction2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="@string/prediction2"
+                            android:textAppearance="@style/LegendText"
+
+                            app:drawableLeftCompat="@drawable/forest_green_rectangle"
+                            android:drawablePadding="2dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/birdprediction_bchart"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/bar_chart_height"
+                    android:layout_marginBottom="16dp"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

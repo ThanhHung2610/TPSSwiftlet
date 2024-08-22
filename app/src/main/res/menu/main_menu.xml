@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/add_device_menu"
+        android:title="@string/add_device"
+        android:orderInCategory="101"
+        android:icon="@drawable/icon_device"
+        />
+    <item android:id="@+id/add_house_menu"
+        android:title="@string/add_house"
+        android:orderInCategory="100"
+        android:icon="@drawable/icon_nest"
+        />
+</menu>

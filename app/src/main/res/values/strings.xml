@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">TPS Swiftlet</string>
+    <string name="Bluetooth">Bluetooth</string>
+    <string name="available_devices">Available devices</string>
+    <string name="paired_devices">Paired devices</string>
+    <string name="title_activity_connect_wifi">ConnectWifiActivity</string>
+    <string name="Connect_wifi">Connect Wifi</string>
+    <string name="wifi">Wifi Name</string>
+    <string name="device_name">Device Name</string>
+    <string name="password">Password</string>
+    <string name="enter_wifi">Enter SSID</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="description_password">Enter password of wifi</string>
+    <string name="description_wifi">Enter ssid of wifi</string>
+    <string name="Next">Next</string>
+    <string name="hole1Id">Hole 1 Identify</string>
+    <string name="sensor1Id">Sensor 1 Identify</string>
+    <string name="hole2Id">Hole 2 Identify</string>
+    <string name="sensor2Id">Sensor 2 Identify</string>
+    <string name="input_error_mustOne">Please input at least a %1$s!</string>
+    <string name="input_error_correspond">Please input %1$s corresponding to %2$s!</string>
+    <string name="input_error_mustbeInt">%1$s must be an integer!</string>
+    <string name="input_error_existed">%1$s existed. Please input another id!</string>
+    <string name="notify_no_permit_location">Please permit our app to access your location to finish this tasks!</string>
+    <string name="x_not_found">%1$s not found! Please try again!</string>
+
+    <string name="Scan">Scan</string>
+    <string name="scan_device">Scan devices</string>
+    <string name="stop_scan_devices">Stop scanning</string>
+    <string name="Dashboard">Dashboard</string>
+    <string name="add_device">Add Device</string>
+    <string name="add_house">Add House</string>
+    <string name="title_activity_scanning">ScanningActivity</string>
+    <string name="Scanning">Scanning</string>
+
+    <string name="Fetch_daily">Fetch Daily</string>
+    <string name="Fetch_data">Fetch Data</string>
+    <string name="Record">Record</string>
+
+    <string name="general_chart">General</string>
+    <string name="fly_in_chart">Fly In</string>
+    <string name="fly_out_chart">Fly Out</string>
+    <string name="total_hourly_chart">Total Hourly</string>
+    <string name="bird_prediction_chart">Bird Prediction</string>
+
+    <string name="today">Today</string>
+    <string name="day1">Day 1</string>
+    <string name="day2">Day 2</string>
+    <string name="prediction">Prediction</string>
+    <string name="prediction2">Prediction2</string>
+
+    <string name="week">Week</string>
+    <string name="two_weeks">2 Weeks</string>
+    <string name="month">Month</string>
+
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="username">Username</string>
+    <string name="login">Log in</string>
+    <string name="connection_error_webapi">Please check your internet connection and retry!</string>
+    <string name="logout">Log out</string>
+
+    <string name="create">Create</string>
+    <string name="input_error_empty">%1$s is empty, please input it!</string>
+    <string name="house_name">House Name</string>
+    <string name="title_activity_add_house">AddHouseActivity</string>
+    <string name="auto_login">Auto login next time</string>
+    <string name="connection_lost">Connection Lost!</string>
+    <string name="no_data_available">No Data Available</string>
+    <string name="sensor2IdValue">2</string>
+    <string name="sensor1IdValue">1</string>
+    <string name="create_user">Create account</string>
+    <string name="change_password">Change password</string>
+    <string name="title_activity_add_user">AddUserActivity</string>
+    <string name="reinput_password">Re-enter password</string>
+    <string name="fullname">Full-name</string>
+    <string name="email">E-mail</string>
+    <string name="phone">Phone</string>
+    <string name="add_user">Create user</string>
+    <string name="error_not_match">%1$ss do not match</string>
+    <string name="role">Role:</string>
+    <string name="title_activity_change_password">ChangePasswordActivity</string>
+    <string name="change">Change</string>
+    <string name="wrong_password">Wrong password</string>
+    <string name="reinput_new_password">Re-enter new password</string>
+    <string name="new_password">New password</string>
+    <string name="profile">Profile</string>
+    <string name="update">Update</string>
+    <string name="update_profile">Update profile</string>
+    <string name="inform_successful">Successfully!</string>
+
+</resources>

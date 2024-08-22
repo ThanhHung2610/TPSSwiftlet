@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TPSEmbedding" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <item name="colorPrimary">@color/my_dark_primary</item>
+        <item name="colorSecondary">@color/my_dark_secondary</item>
+        <item name="colorTertiary">@color/my_dark_tertiary</item>
+<!--        <item name="colorAccent"-->
+    </style>
+    <color name="cell_border_color">@color/white</color>
+    <color name="cell_background_color">@color/black</color>
+    <color name="table_border_color">@color/white</color>
+    <color name="textInput_background">#00000000</color>
+    <color name="spinner_item">@color/white</color>
+    <color name="spinner_background">@color/black</color>
+
+
+    <style name="CustomPopupTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:itemBackground">#1C1B1F</item>
+<!--        <item name="android:textColor">@color/white</item>-->
+<!--        <item name="android:background">@android:color/transparent</item>-->
+<!--        <item name="android:colorBackground">@color/tabBgroundColor</item>-->
+<!--        <item name="android:dividerHeight">1dp</item>-->
+        <item name="android:dropDownListViewStyle">@style/PopupMenuListView</item>
+    </style>
+    <style name="Theme.TPSEmbedding" parent="Base.Theme.TPSEmbedding" />
+</resources>

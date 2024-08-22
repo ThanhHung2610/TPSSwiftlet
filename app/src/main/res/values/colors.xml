@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#FF00FF00</color>
+    <color name="grey">#FFD3D3D3</color>
+    <color name="red">#FFFF0000</color>
+    <color name="cell_border_color">@color/black</color>
+    <color name="cell_background_color">@color/white</color>
+    <color name="table_border_color">@color/black</color>
+    <color name="jungle_green">#FF29AB87</color>
+
+    <color name="textInput_background">#FFF8E7B3</color>
+    <color name="text_hint">@color/black</color>
+
+    <color name="rouge">#F26B8A</color>
+    <color name="forest_green">#228B22</color>
+    <color name="cobalt_blue">#0047AB</color>
+
+<!--    <color name="tabSelectedColor">#676767</color>-->
+    <color name="tabSelectedColor">@color/white</color>
+    <color name="tabBgroundColor">#FFF8E7B3</color>
+    <color name="spinner_item">@color/black</color>
+    <color name="spinner_background">@color/white</color>
+
+    <color name="my_dark_primary">#FFD0BCFF</color> <!--Purple80-->
+    <color name="my_dark_secondary">#FFCCC2DC</color> <!--PurpleGrey80-->
+    <color name="my_dark_tertiary">#FFEFB8C8</color> <!--Pink80-->
+</resources>
