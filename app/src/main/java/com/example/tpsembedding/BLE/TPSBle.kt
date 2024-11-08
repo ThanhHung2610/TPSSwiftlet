@@ -141,20 +141,7 @@ object TPSBle {
             DataManager.hole2Id = null }
         val message = wifi.toString()
 
-        val isSuccessful = BluetoothLEManager.writeCharacteristic(context,message)
-
-        if  (isSuccessful) {
-            // Turn on Flag isSendInfoSuccess
-            DataManager.isSendInfoSuccess = true
-            //showToast2Main("Sent wifi information!")
-        }
-        Thread.sleep(1000)
-        BluetoothLEManager.disconnectGatt(context)
-        // Finish scanning activity
-        val currentActivity = CurrentActivityTracker.currentActivity
-        if (currentActivity is ScanningActivity) {
-            currentActivity.finish()
-        }
+        val isSuccessful = BluetoothLEManager.writeCharacteristic(context, message)
     }
 
     private fun gattCallback() = object : BluetoothGattCallback() {
@@ -171,6 +158,15 @@ object TPSBle {
             } else if (newState == android.bluetooth.BluetoothProfile.STATE_DISCONNECTED) {
                 //showToast2Main("Disconnected")
                 println("Disconnected")
+                if (!DataManager.isSendInfoSuccess)
+                {
+                    // Finish scanning activity
+                    val currentActivity = CurrentActivityTracker.currentActivity
+                    if (currentActivity is ScanningActivity) {
+                        BluetoothLEManager.closeBle(context)
+                        currentActivity.finish()
+                    }
+                }
             }
         }
 
@@ -191,12 +187,26 @@ object TPSBle {
         override fun onCharacteristicChanged(gatt: BluetoothGatt, characteristic: BluetoothGattCharacteristic) {
             if (characteristic.uuid == BluetoothLEManager.UART_TX_CHARACTERISTIC_UUID) {
                 val data = characteristic.value
+                println("hung check data ${data}")
                 // Handle the received data as needed
                 val customerId = Utils.bytearrayToLong(data)
                 if (customerId != (-1).toLong()){
                     DataManager.deviceId = customerId
                     // Send message to this BLE device
                     sendMessageToBle()
+                }
+                else {
+                    val stringValue = data.joinToString("") { it.toInt().toChar().toString()}
+                    if (stringValue == "BLE received")
+                    {
+                        DataManager.isSendInfoSuccess = true
+                        BluetoothLEManager.disconnectGatt(context)
+                        // Finish scanning activity
+                        val currentActivity = CurrentActivityTracker.currentActivity
+                        if (currentActivity is ScanningActivity) {
+                            currentActivity.finish()
+                        }
+                    }
                 }
             }
         }

@@ -64,8 +64,7 @@ class AddHouseActivity : ComponentActivity() {
                         val isSuccess = jsonObject["isSuccessful"]?.jsonPrimitive?.boolean
                         if (isSuccess == true) {
                             val data = jsonObject["data"]?.jsonArray
-                            val newHouseId =
-                                data?.get(0)?.jsonObject?.get("id")?.jsonPrimitive?.long
+                            val newHouseId = data?.get(0)?.jsonObject?.get("id")?.jsonPrimitive?.long
                             if (newHouseId != null) {
                                 onCreateSuccess(newHouseId, name)
                             }

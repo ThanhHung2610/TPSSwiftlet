@@ -187,14 +187,11 @@ class AddDeviceActivity : ComponentActivity() {
         editor.putString(PreferencesTPS.passwordWifi,passw)
         editor.putString(PreferencesTPS.deviceName,device_n)
         editor.apply()
-        if (!DataManager.isSendInfoSuccess) {
-            DataManager.isAddingDevice = true
-            TPSBle.startScan()
-            val intent = Intent(this, ScanningActivity::class.java)
-            startActivity(intent)
-        } else{
-            addDeviceWebApi()
-        }
+
+        DataManager.isAddingDevice = true
+        TPSBle.startScan()
+        val intent = Intent(this, ScanningActivity::class.java)
+        startActivity(intent)
     }
 
     private fun addDeviceWebApi(){
